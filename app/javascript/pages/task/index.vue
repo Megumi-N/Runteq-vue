@@ -1,20 +1,13 @@
 <template>
-  <div class="d-flex flex-column min-vh-100">
-    <header class="mb-auto">
-      <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">{{ title }}</span>
-      </nav>
-    </header>
-    <div class="d-flex">
-      <div class="col-4 bg-light rounded shadow m-3 p-3">
-        <div class="h4">TODO</div>
-        <div
-          v-for="task in tasks"
-          :key="task.id"
-          class="bg-white border shadow-sm rounded my-2 p-4"
-        >
-          <span>{{ task.title }}</span>
-        </div>
+  <div class="d-flex">
+    <div class="col-4 bg-light rounded shadow m-3 p-3">
+      <div class="h4">TODO</div>
+      <div
+        v-for="task in tasks"
+        :key="task.id"
+        class="bg-white border shadow-sm rounded my-2 p-4"
+      >
+        <span>{{ task.title }}</span>
       </div>
     </div>
     <div class="text-center">
@@ -22,9 +15,6 @@
         >戻る</router-link
       >
     </div>
-    <footer class="mt-auto text-center">
-      <small>Copyright &copy; 2020. RUNTEQ</small>
-    </footer>
   </div>
 </template>
 
