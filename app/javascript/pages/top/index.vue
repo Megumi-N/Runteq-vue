@@ -10,7 +10,9 @@
       <div class="mt-4">
         生活や仕事に関するタスクを見える化して抜け漏れを防ぎましょう。
       </div>
-      <button type="button" class="btn btn-dark mt-5">はじめる</button>
+      <router-link to="/tasks" type="button" class="btn btn-dark mt-5">
+        はじめる
+      </router-link>
     </div>
     <footer class="text-center mt-auto">
       <small>Copyright &copy; 2020. RUNTEQ</small>
