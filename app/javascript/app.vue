@@ -1,46 +1,32 @@
 <template>
-  <div id="app">
-    <div class="d-flex flex-column min-vh-100">
-      <header
-        class="mb-auto"
-        >
-        <nav class="navbar navbar-expand navbar-dark bg-dark justify-content-between">
-          <span class="navbar-brand mb-0 h1">タスク管理アプリ</span>
-          <ul class="navbar-nav">
-            <li class="nav-item active"></li>
-            <li class="nav-item active"></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="text-center">
-        <h3>{{ message }}</h3>
-        <div class="mt-4">生活や仕事に関するタスクを見える化して抜け漏れを防ぎましょう。</div>
-        <button type="button" class="btn btn-dark mt-5">はじめる</button>
+  <div id="app" class="d-flex flex-column min-vh-100">
+    <header class="mb-auto">
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">{{ title }}</span>
+      </nav>
+    </header>
+    <div class="text-center">
+      <h3>タスクを管理しよう！</h3>
+      <div class="mt-4">
+        生活や仕事に関するタスクを見える化して抜け漏れを防ぎましょう。
       </div>
-      <footer class="text-center mt-auto">
-        <small>Copyright © 2020. RUNTEQ</small>
-      </footer>
+      <button type="button" class="btn btn-dark mt-5">はじめる</button>
     </div>
+    <footer class="text-center mt-auto">
+      <small>Copyright &copy; 2020. RUNTEQ</small>
+    </footer>
   </div>
 </template>
 
 <script>
 export default {
-  data: function () {
+  name: "Top",
+  data() {
     return {
-      message: "タスクを管理しよう！",
+      title: "タスク管理アプリ",
     };
   },
 };
 </script>
 
-<style scoped>
-
-.navbar {
-  position: relative;
-  padding: .5rem 1rem;
-}
-span{
-  color: white;
-}
-</style>
+<style scoped></style>
