@@ -4,11 +4,7 @@
     <div class="mt-4">
       生活や仕事に関するタスクを見える化して抜け漏れを防ぎましょう。
     </div>
-    <router-link
-      :to="{ name: 'TaskIndex' }"
-      type="button"
-      class="btn btn-dark mt-5"
-    >
+    <router-link :to="{ name: 'TaskIndex' }" class="btn btn-dark mt-5">
       はじめる
     </router-link>
   </div>
@@ -17,11 +13,6 @@
 <script>
 export default {
   name: "TopIndex",
-  data() {
-    return {
-      title: "タスク管理アプリ",
-    };
-  },
 };
 </script>
 

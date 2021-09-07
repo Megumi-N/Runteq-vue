@@ -1,21 +1,21 @@
 <template>
   <div>
     <div class="d-flex flex-column min-vh-100">
-      <Header />
+      <TheHeader class="mb-auto" />
       <router-view />
-      <Footer />
+      <TheFooter class="mt-auto" />
     </div>
   </div>
 </template>
 
 <script>
-import Header from "./components/TheHeader.vue";
-import Footer from "./components/TheFooter.vue";
+import TheHeader from "./components/TheHeader.vue";
+import TheFooter from "./components/TheFooter.vue";
 
 export default {
   components: {
-    Header,
-    Footer,
+    TheHeader,
+    TheFooter,
   },
 };
 </script>
