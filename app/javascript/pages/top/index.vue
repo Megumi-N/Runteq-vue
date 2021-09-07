@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="d-flex flex-column min-vh-100">
+  <div class="d-flex flex-column min-vh-100">
     <header class="mb-auto">
       <nav class="navbar navbar-dark bg-dark">
         <span class="navbar-brand mb-0 h1">{{ title }}</span>
@@ -10,7 +10,11 @@
       <div class="mt-4">
         生活や仕事に関するタスクを見える化して抜け漏れを防ぎましょう。
       </div>
-      <router-link to="/tasks" type="button" class="btn btn-dark mt-5">
+      <router-link
+        :to="{ name: 'TaskIndex' }"
+        type="button"
+        class="btn btn-dark mt-5"
+      >
         はじめる
       </router-link>
     </div>
@@ -22,7 +26,7 @@
 
 <script>
 export default {
-  name: "Top",
+  name: "TopIndex",
   data() {
     return {
       title: "タスク管理アプリ",
