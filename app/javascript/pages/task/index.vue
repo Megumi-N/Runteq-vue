@@ -3,6 +3,11 @@
     <div class="d-flex">
       <div class="col-4 bg-light rounded shadow m-3 p-3">
         <div class="h4">TODO</div>
+        <ul>
+          <li v-for="(value, key, index) in tasks" :key="index">
+            {{ tasks[key].title }}
+          </li>
+        </ul>
       </div>
       <div class="tex-center">
         <router-link :to="{ name: 'TopIndex' }" class="btn btn-dark mt-5"
@@ -18,25 +23,14 @@ export default {
   name: "TaskIndex",
   data() {
     return {
-      tasks: [
-        {
-          id: 1,
-          title: "スーパに買い物に行く",
-        },
-        {
-          id: 2,
-          title: "子供の迎えに行く",
-        },
-        {
-          id: 3,
-          title: "新聞を解約する",
-        },
-        {
-          id: 4,
-          title: "ゴミ出しをする",
-        },
-      ],
+      tasks: [],
     };
+  },
+  created() {
+    const axios = require("axios");
+    axios
+      .get("http://localhost:3000/api/tasks")
+      .then((response) => (this.tasks = response.data));
   },
 };
 </script>
