@@ -1,5 +1,5 @@
 class Api::TasksController < ApplicationController
-  before_action :set_task, %i(show update destroy)
+  before_action :set_task, %i[show update destroy]
 
   def index
     @tasks = Task.all
@@ -42,5 +42,4 @@ class Api::TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:title)
   end
-
 end
