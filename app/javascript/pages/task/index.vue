@@ -4,8 +4,8 @@
       <div class="col-4 bg-light rounded shadow m-3 p-3">
         <div class="h4">TODO</div>
         <ul>
-          <li v-for="(value, key, index) in tasks" :key="index">
-            {{ tasks[key].title }}
+          <li v-for="data in tasks" :key="data.id">
+            {{ data.title }}
           </li>
         </ul>
       </div>
@@ -27,10 +27,16 @@ export default {
     };
   },
   created() {
-    const axios = require("axios");
-    axios
-      .get("http://localhost:3000/api/tasks")
-      .then((response) => (this.tasks = response.data));
+    this.fetchTasks();
+  },
+
+  methods: {
+    fetchTasks() {
+      this.$axios
+        .get("tasks")
+        .then((res) => (this.tasks = res.data))
+        .catch((err) => console.log(err.status));
+    },
   },
 };
 </script>
